@@ -87,28 +87,15 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.gateway</groupId>
-            <artifactId>Volunteer-common</artifactId>
+            <groupId>com.activity</groupId>
+            <artifactId>Volunteer-All-common</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
+
         <dependency>
-            <groupId>com.gateway</groupId>
-            <artifactId>Volunteer-api</artifactId>
+            <groupId>com.activity</groupId>
+            <artifactId>Volunteer-All-Api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
