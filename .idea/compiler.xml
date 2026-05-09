@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="activity-service" />
+        <module name="gateway-service (1)" />
+        <module name="gateway-service (2)" />
+        <module name="Points-service" />
+        <module name="CheckIn-service" />
+        <module name="Volunteer-All-Api" />
+        <module name="registration-service" />
+        <module name="SpringAi-be" />
+        <module name="Message-service" />
+        <module name="user-service" />
+        <module name="Volunteer-All-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gateway-service" target="17" />
+      <module name="Points-api" target="17" />
+      <module name="Points-common" target="17" />
+      <module name="Registration-server (1)" target="1.5" />
+      <module name="Registration-server (2)" target="17" />
+      <module name="review-service" target="17" />
+      <module name="review-service (1) (com.example)" target="17" />
+      <module name="review-service (2) (com.cyh)" target="17" />
+      <module name="untitled" target="17" />
+      <module name="Volunteer-api" target="17" />
+      <module name="Volunteer-api (1)" target="17" />
+      <module name="Volunteer-api (1) (com.activity)" target="17" />
+      <module name="Volunteer-api (1) (org.example)" target="17" />
+      <module name="Volunteer-Api (2)" target="17" />
+      <module name="Volunteer-api (2)" target="17" />
+      <module name="Volunteer-api (2) (com.checkIn)" target="17" />
+      <module name="Volunteer-api (2) (com.cyh)" target="17" />
+      <module name="Volunteer-api (2) (com.points)" target="17" />
+      <module name="Volunteer-api (2) (com.registration)" target="17" />
+      <module name="Volunteer-api (2) (com.review)" target="17" />
+      <module name="Volunteer-api (2) (org.example)" target="17" />
+      <module name="Volunteer-Api (3)" target="17" />
+      <module name="Volunteer-api (3)" target="17" />
+      <module name="Volunteer-api (3) (com.checkIn)" target="17" />
+      <module name="Volunteer-api (3) (com.cyh)" target="17" />
+      <module name="Volunteer-api (3) (com.points)" target="17" />
+      <module name="Volunteer-api (3) (com.registration)" target="17" />
+      <module name="Volunteer-api (3) (com.review)" target="17" />
+      <module name="Volunteer-api (4)" target="17" />
+      <module name="Volunteer-Api (4)" target="17" />
+      <module name="Volunteer-api (4) (com.cyh)" target="17" />
+      <module name="Volunteer-api (4) (com.gateway)" target="17" />
+      <module name="Volunteer-api (4) (com.points)" target="17" />
+      <module name="Volunteer-api (4) (com.registration)" target="17" />
+      <module name="Volunteer-api (4) (com.review)" target="17" />
+      <module name="Volunteer-api (5)" target="17" />
+      <module name="Volunteer-Api (5)" target="17" />
+      <module name="Volunteer-api (5) (com.cyh)" target="17" />
+      <module name="Volunteer-api (5) (com.points)" target="17" />
+      <module name="Volunteer-api (5) (com.registration)" target="17" />
+      <module name="Volunteer-api (5) (com.review)" target="17" />
+      <module name="Volunteer-api (6)" target="17" />
+      <module name="Volunteer-Api (6)" target="17" />
+      <module name="Volunteer-api (6) (com.cyh)" target="17" />
+      <module name="Volunteer-api (6) (com.registration)" target="17" />
+      <module name="Volunteer-api (6) (com.review)" target="17" />
+      <module name="Volunteer-Api (7)" target="17" />
+      <module name="Volunteer-api (7)" target="17" />
+      <module name="Volunteer-api (7) (com.cyh)" target="17" />
+      <module name="Volunteer-api (7) (com.review)" target="17" />
+      <module name="Volunteer-Api (8)" target="17" />
+      <module name="Volunteer-api (8) (com.cyh)" target="17" />
+      <module name="Volunteer-common" target="17" />
+      <module name="Volunteer-common (1)" target="17" />
+      <module name="Volunteer-common (1) (com.activity)" target="17" />
+      <module name="Volunteer-common (1) (org.example)" target="17" />
+      <module name="Volunteer-common (2)" target="17" />
+      <module name="Volunteer-common (2) (com.checkIn)" target="17" />
+      <module name="Volunteer-common (2) (com.cyh)" target="17" />
+      <module name="Volunteer-common (2) (com.points)" target="17" />
+      <module name="Volunteer-common (2) (com.registration)" target="17" />
+      <module name="Volunteer-common (2) (com.review)" target="17" />
+      <module name="Volunteer-common (2) (com.user)" target="17" />
+      <module name="Volunteer-common (2) (org.example)" target="17" />
+      <module name="Volunteer-common (3)" target="17" />
+      <module name="Volunteer-common (3) (com.checkIn)" target="17" />
+      <module name="Volunteer-common (3) (com.cyh)" target="17" />
+      <module name="Volunteer-common (3) (com.points)" target="17" />
+      <module name="Volunteer-common (3) (com.registration)" target="17" />
+      <module name="Volunteer-common (3) (com.review)" target="17" />
+      <module name="Volunteer-common (3) (com.user)" target="17" />
+      <module name="Volunteer-common (4)" target="17" />
+      <module name="Volunteer-common (4) (com.cyh)" target="17" />
+      <module name="Volunteer-common (4) (com.gateway)" target="17" />
+      <module name="Volunteer-common (4) (com.points)" target="17" />
+      <module name="Volunteer-common (4) (com.registration)" target="17" />
+      <module name="Volunteer-common (4) (com.review)" target="17" />
+      <module name="Volunteer-common (4) (com.user)" target="17" />
+      <module name="Volunteer-common (5)" target="17" />
+      <module name="Volunteer-common (5) (com.cyh)" target="17" />
+      <module name="Volunteer-common (5) (com.points)" target="17" />
+      <module name="Volunteer-common (5) (com.registration)" target="17" />
+      <module name="Volunteer-common (5) (com.review)" target="17" />
+      <module name="Volunteer-common (5) (com.user)" target="17" />
+      <module name="Volunteer-common (6)" target="17" />
+      <module name="Volunteer-common (6) (com.cyh)" target="17" />
+      <module name="Volunteer-common (6) (com.registration)" target="17" />
+      <module name="Volunteer-common (6) (com.review)" target="17" />
+      <module name="Volunteer-common (6) (com.user)" target="17" />
+      <module name="Volunteer-common (7)" target="17" />
+      <module name="Volunteer-common (7) (com.cyh)" target="17" />
+      <module name="Volunteer-common (7) (com.review)" target="17" />
+      <module name="Volunteer-common (7) (com.user)" target="17" />
+      <module name="Volunteer-Common (8)" target="17" />
+      <module name="Volunteer-common (8) (com.cyh)" target="17" />
+      <module name="Volunteer-Points-Api" target="17" />
+      <module name="volunteer-service-platform" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Activity-server" options="" />
+      <module name="CheckIn-server" options="" />
+      <module name="CheckIn-service" options="-parameters" />
+      <module name="Gateway" options="" />
+      <module name="Message-server" options="" />
+      <module name="Message-service" options="-parameters" />
+      <module name="Points-api" options="-parameters" />
+      <module name="Points-common" options="-parameters" />
+      <module name="Points-server" options="" />
+      <module name="Points-service" options="-parameters" />
+      <module name="Registration-server" options="" />
+      <module name="Registration-server (2)" options="-parameters" />
+      <module name="Review-server" options="" />
+      <module name="SpringAi-be" options="-parameters" />
+      <module name="User-server" options="" />
+      <module name="Volunteer-All-Api" options="-parameters" />
+      <module name="Volunteer-Api (2)" options="-parameters" />
+      <module name="Volunteer-Api (3)" options="-parameters" />
+      <module name="Volunteer-Api (4)" options="-parameters" />
+      <module name="Volunteer-Api (5)" options="-parameters" />
+      <module name="Volunteer-Api (6)" options="-parameters" />
+      <module name="Volunteer-Api (7)" options="-parameters" />
+      <module name="Volunteer-Api (8)" options="-parameters" />
+      <module name="Volunteer-Common (8)" options="-parameters" />
+      <module name="Volunteer-Points-Api" options="-parameters" />
+      <module name="Volunteer-api" options="-parameters" />
+      <module name="Volunteer-api (1)" options="-parameters" />
+      <module name="Volunteer-api (1) (com.activity)" options="-parameters" />
+      <module name="Volunteer-api (1) (org.example)" options="-parameters" />
+      <module name="Volunteer-api (2)" options="-parameters" />
+      <module name="Volunteer-api (2) (com.checkIn)" options="-parameters" />
+      <module name="Volunteer-api (2) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (2) (com.points)" options="-parameters" />
+      <module name="Volunteer-api (2) (com.registration)" options="-parameters" />
+      <module name="Volunteer-api (2) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (2) (org.example)" options="-parameters" />
+      <module name="Volunteer-api (3)" options="-parameters" />
+      <module name="Volunteer-api (3) (com.checkIn)" options="-parameters" />
+      <module name="Volunteer-api (3) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (3) (com.points)" options="-parameters" />
+      <module name="Volunteer-api (3) (com.registration)" options="-parameters" />
+      <module name="Volunteer-api (3) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (4)" options="-parameters" />
+      <module name="Volunteer-api (4) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (4) (com.gateway)" options="-parameters" />
+      <module name="Volunteer-api (4) (com.points)" options="-parameters" />
+      <module name="Volunteer-api (4) (com.registration)" options="-parameters" />
+      <module name="Volunteer-api (4) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (5)" options="-parameters" />
+      <module name="Volunteer-api (5) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (5) (com.points)" options="-parameters" />
+      <module name="Volunteer-api (5) (com.registration)" options="-parameters" />
+      <module name="Volunteer-api (5) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (6)" options="-parameters" />
+      <module name="Volunteer-api (6) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (6) (com.registration)" options="-parameters" />
+      <module name="Volunteer-api (6) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (7)" options="-parameters" />
+      <module name="Volunteer-api (7) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-api (7) (com.review)" options="-parameters" />
+      <module name="Volunteer-api (8) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common" options="-parameters" />
+      <module name="Volunteer-common (1)" options="-parameters" />
+      <module name="Volunteer-common (1) (com.activity)" options="-parameters" />
+      <module name="Volunteer-common (1) (org.example)" options="-parameters" />
+      <module name="Volunteer-common (2)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.checkIn)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.points)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.registration)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (2) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (2) (org.example)" options="-parameters" />
+      <module name="Volunteer-common (3)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.checkIn)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.points)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.registration)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (3) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (4)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.gateway)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.points)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.registration)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (4) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (5)" options="-parameters" />
+      <module name="Volunteer-common (5) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (5) (com.points)" options="-parameters" />
+      <module name="Volunteer-common (5) (com.registration)" options="-parameters" />
+      <module name="Volunteer-common (5) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (5) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (6)" options="-parameters" />
+      <module name="Volunteer-common (6) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (6) (com.registration)" options="-parameters" />
+      <module name="Volunteer-common (6) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (6) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (7)" options="-parameters" />
+      <module name="Volunteer-common (7) (com.cyh)" options="-parameters" />
+      <module name="Volunteer-common (7) (com.review)" options="-parameters" />
+      <module name="Volunteer-common (7) (com.user)" options="-parameters" />
+      <module name="Volunteer-common (8) (com.cyh)" options="-parameters" />
+      <module name="activity-service" options="-parameters" />
+      <module name="backend" options="" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="gateway-service (1)" options="-parameters" />
+      <module name="gateway-service (2)" options="-parameters" />
+      <module name="registration-service" options="-parameters" />
+      <module name="review-service" options="-parameters" />
+      <module name="review-service (1) (com.example)" options="-parameters" />
+      <module name="review-service (2) (com.cyh)" options="-parameters" />
+      <module name="untitled" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="volunteer-service-platform" options="" />
+    </option>
+  </component>
+</project>

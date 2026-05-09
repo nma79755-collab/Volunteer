@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyh.pointsservice.mapper.PointsMapper">
+
+    <!-- Find points by user id -->
+    <select id="findByUserId" parameterType="java.lang.Long" resultType="com.cyh.pointsservice.entity.Points">
+        SELECT * FROM t_points WHERE user_id = #{userId} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+
+    <!-- Find points by activity id -->
+    <select id="findByActivityId" parameterType="java.lang.Long" resultType="com.cyh.pointsservice.entity.Points">
+        SELECT * FROM t_points WHERE activity_id = #{activityId} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+
+    <!-- Find points by create time -->
+    <select id="findByCreateTime" parameterType="map" resultType="com.cyh.pointsservice.entity.Points">
+        SELECT * FROM t_points 
+        WHERE create_time >= #{startTime} AND create_time &lt;= #{endTime} AND is_deleted = 0 
+        ORDER BY create_time DESC
+    </select>
+
+</mapper>

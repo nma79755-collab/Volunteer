@@ -1,0 +1,60 @@
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Gateway/gateway-service" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/AI-server/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/pom.xml" />
+        <option value="$PROJECT_DIR$/Activity-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Activity-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Activity-server/activity-service/pom.xml" />
+        <option value="$PROJECT_DIR$/CheckIn-server/CheckIn-service/pom.xml" />
+        <option value="$PROJECT_DIR$/CheckIn-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/CheckIn-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Registration-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Registration-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Registration-server/registration-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Points-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Points-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Points-server/Points-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Review-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Review-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Review-server/review-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Volunteer-Common/pom.xml" />
+        <option value="$PROJECT_DIR$/Message-server/Message-service/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/AI-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/AI-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Activity-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Activity-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/CheckIn-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/CheckIn-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Points-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Points-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Registration-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Registration-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/Review-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Review-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/Volunteer-api/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/Volunteer-common/pom.xml" />
+        <option value="$PROJECT_DIR$/User-server/untitled/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+</project>
