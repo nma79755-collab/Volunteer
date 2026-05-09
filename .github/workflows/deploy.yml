@@ -4,7 +4,7 @@ name: Deploy Volunteer Services
 # 触发器：告诉 GitHub 什么时候自动运行这个工作流
 on:
   push:
-    branches: [ master ]        # 当 master 分支有新的推送时触发
+    branches: [ main ]        # 当 master 分支有新的推送时触发
   workflow_dispatch: # 允许手动触发
   repository_dispatch: # 允许 API 调用触发
      types: [ deploy-from-admin ]    # 允许在 GitHub 网页上手动触发
