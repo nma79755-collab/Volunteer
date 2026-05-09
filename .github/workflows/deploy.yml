@@ -1,0 +1,58 @@
+# 工作流名称：给这个自动化任务起个名字
+name: Deploy Volunteer Services
+
+# 触发器：告诉 GitHub 什么时候自动运行这个工作流
+on:
+  push:
+    branches: [ master ]        # 当 master 分支有新的推送时触发
+  workflow_dispatch: # 允许手动触发
+  repository_dispatch: # 允许 API 调用触发
+     types: [ deploy-from-admin ]    # 允许在 GitHub 网页上手动触发
+
+# 一个工作流由一个或多个任务（job）组成
+jobs:
+  build-and-deploy:             # 自定义任务名称
+    runs-on: ubuntu-latest      # 这个任务运行在 GitHub 提供的 Ubuntu 虚拟机上
+    steps:
+      # 步骤 1：拉取仓库代码到虚拟机
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 步骤 2：安装 Java 17 环境
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+
+      # 步骤 3：缓存 Maven 依赖，避免每次都重新下载
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # 步骤 4：用 Maven 编译打包所有模块，跳过测试以节省时间
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      # 步骤 5：通过 SSH 登录你的服务器，执行部署命令
+      - name: Deploy to server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 192.168.50.134       # 你的服务器 IP
+          username: root   # 登录用户名
+          key:
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACB9N6Gs+2uVJL4vBrMb8JOv41CeeeENKg7nCwgC6RK7BQAAAJhhYR5XYWEe
+            VwAAAAtzc2gtZWQyNTUxOQAAACB9N6Gs+2uVJL4vBrMb8JOv41CeeeENKg7nCwgC6RK7BQ
+            AAAED/91vuoa7RkxYen1cw2B22RP24CMeZJqX6xEL2KOK5+H03oaz7a5Ukvi8Gsxvwk6/j
+            UJ554Q0qDucLCALpErsFAAAADmdpdGh1Yi1hY3Rpb25zAQIDBAUGBw==
+          script: |
+            echo "开始部署..."
+            cd /opt/volunteer
+            docker-compose down
+            docker-compose up -d --build
+            echo "部署完成!"

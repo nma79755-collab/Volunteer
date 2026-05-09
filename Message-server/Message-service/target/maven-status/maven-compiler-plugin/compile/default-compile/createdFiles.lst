@@ -1,0 +1,12 @@
+com\example\messageservice\Config\WebSocketConfig.class
+com\example\messageservice\Interceptor\DefaultHandler.class
+com\example\messageservice\Service\MessageService.class
+com\example\messageservice\mapper\MessageMapper.class
+com\example\messageservice\Controller\FileController.class
+com\example\messageservice\MessageServiceApplication.class
+com\example\messageservice\Interceptor\WebSocketInterceptor.class
+com\example\messageservice\mapper\ChatMessageMapper.class
+com\example\messageservice\Utils\JwtTokenProvider.class
+com\example\messageservice\Config\OssConfig.class
+com\example\messageservice\properties\OssProperties.class
+com\example\messageservice\Controller\MessageController.class

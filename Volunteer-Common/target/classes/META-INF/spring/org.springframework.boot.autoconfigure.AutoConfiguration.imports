@@ -1,0 +1,5 @@
+com.cyh.Config.SecurityConfig
+com.cyh.Config.WebMVCConfig
+com.cyh.Config.ObjectMapperConfig
+com.cyh.Config.MQConfig
+com.cyh.Config.XXL_Config

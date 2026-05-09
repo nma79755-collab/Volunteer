@@ -1,0 +1,15 @@
+com\example\registrationservice\Dto\RegistrationCreateRequest.class
+com\example\registrationservice\Dto\RegistrationResponse$RegistrationResponseBuilder.class
+com\example\registrationservice\Dto\RegistrationListResponse$RegistrationListResponseBuilder.class
+com\example\registrationservice\Controller\RegistrationController.class
+com\example\registrationservice\Aspect\OperationLogAspect.class
+com\example\registrationservice\enums\RegistrationStatus.class
+com\example\registrationservice\Service\RegistrationValidator.class
+com\example\registrationservice\Service\RegistrationService.class
+com\example\registrationservice\Dto\RegistrationListResponse.class
+com\example\registrationservice\RegistrationServiceApplication.class
+com\example\registrationservice\Dto\RegistrationResponse.class
+com\example\registrationservice\Aspect\OperationLogAnnotation.class
+com\example\registrationservice\Dto\RegistrationCreateRequest$RegistrationCreateRequestBuilder.class
+com\example\registrationservice\mapper\OperationLogMapper.class
+com\example\registrationservice\mapper\RegistrationMapper.class

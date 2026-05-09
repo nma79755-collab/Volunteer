@@ -1,0 +1,15 @@
+com\cyh\reviewservice\Dto\ReviewRejectRequest.class
+com\cyh\reviewservice\Dto\ReviewBatchRequest.class
+com\cyh\reviewservice\Service\ReviewValidator.class
+com\cyh\reviewservice\aspect\OperationLogAspect.class
+com\cyh\reviewservice\Dto\ReviewRejectRequest$ReviewRejectRequestBuilder.class
+com\cyh\reviewservice\Dto\ReviewBatchResponse.class
+com\cyh\reviewservice\ReviewServiceApplication.class
+com\cyh\reviewservice\aspect\OperationLogAnnotation.class
+com\cyh\reviewservice\Dto\ReviewResponse$ReviewResponseBuilder.class
+com\cyh\reviewservice\mapper\OperationLogMapper.class
+com\cyh\reviewservice\Service\ReviewService.class
+com\cyh\reviewservice\Controller\ReviewController.class
+com\cyh\reviewservice\Dto\ReviewResponse.class
+com\cyh\reviewservice\Dto\ReviewBatchRequest$ReviewBatchRequestBuilder.class
+com\cyh\reviewservice\Dto\ReviewBatchResponse$ReviewBatchResponseBuilder.class

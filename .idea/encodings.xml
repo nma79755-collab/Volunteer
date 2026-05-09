@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/AI-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AI-server/Volunteer-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AI-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AI-server/Volunteer-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AI-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AI-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/Volunteer-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/activity-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Activity-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CheckIn-server/CheckIn-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CheckIn-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CheckIn-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CheckIn-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CheckIn-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Message-server/Message-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Message-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Message-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Points-server/Points-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Points-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Points-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Points-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Points-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Registration-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Registration-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Registration-server/registration-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Registration-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Registration-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Review-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Review-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Review-server/review-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Review-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Review-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/Volunteer-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/Volunteer-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/Volunteer-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/Volunteer-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/untitled/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/User-server/user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Volunteer-Api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Volunteer-Common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Volunteer-Common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hs_err_pid30840.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hs_err_pid4192.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

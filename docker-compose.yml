@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  gateway:
+    build: ./Gateway/gateway-service
+    ports:
+      - "8080:8080"
+    restart: always
+
+  user-service:
+    build: ./User-server/user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - GITHUB_DEPLOY_TOKEN=${GITHUB_DEPLOY_TOKEN}
+    restart: always
+
+  activity-service:
+    build: ./Activity-server/activity-service
+    ports:
+      - "8082:8082"
+    restart: always
+
+  checkin-service:
+    build: ./CheckIn-server/CheckIn-service
+    ports:
+      - "8083:8083"
+    restart: always
+
+  points-service:
+    build: ./Points-server/Points-service
+    ports:
+      - "8084:8084"
+    restart: always
+
+  registration-service:
+    build: ./Registration-server/registration-service
+    ports:
+      - "8085:8085"
+    restart: always
+
+  ai-service:
+    build: ./AI-server/SpringAi-be
+    ports:
+      - "8086:8086"
+    restart: always
+
+  review-service:
+    build: ./Review-server/review-service
+    ports:
+      - "8087:8087"
+    restart: always
+
+  message-service:
+    build: ./Message-server/Message-service
+    ports:
+      - "8088:8088"
+    restart: always

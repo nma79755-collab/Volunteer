@@ -1,0 +1,6 @@
+com\cyh\Client\RegistrationClient.class
+com\cyh\Client\CheckInClient.class
+com\cyh\Client\PointsClient.class
+com\cyh\Client\UserClient.class
+com\cyh\Client\ActivityClient.class
+com\cyh\Config\FeignConfig.class

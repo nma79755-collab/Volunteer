@@ -1,0 +1,103 @@
+spring:
+
+ application:
+  name: AI-Service
+ autoconfigure:
+  exclude:
+   - com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration
+   - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+    - org.springframework.boot.autoconfigure.data.redis.RedisReactiveAutoConfiguration
+    - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+ datasource:
+   url: jdbc:mysql://localhost:3306/volunteer_db?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+   username: root
+   password: 111600
+   driver-class-name: com.mysql.cj.jdbc.Driver
+ cloud:
+  sentinel:
+   transport:
+    dashboard: 192.168.50.134:8858
+   http-method-specify: true #设置请求方式为资源名称
+  nacos:
+   server-addr: 192.168.50.134:8848
+   config:
+    import-check:
+     enabled: false
+ servlet:
+  multipart:
+   enabled: true
+   max-file-size: 10MB #单个文件最大10M
+   max-request-size: 10MB
+ ai:
+  mcp: #是将工具注册到mcp供别的服务来调用的,本地项目直接用tool
+   server:
+    name: mcp-server # MCP 服务器名称
+    version: 1.0.0
+    protocol: STREAMABLE    # 推荐使用 STREAMABLE 协议
+   client:
+    enabled: true
+    request-timeout: 60s
+    stdio:
+     connections:
+      web-search: # Tavily
+       command: "E:\\node24\\npx.cmd"
+       args:
+        - "-y"
+        - "tavily-mcp"
+       env:
+        TAVILY_API_KEY: "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"
+
+      cognitive: # 和 web-search 平级，不是子项！
+       command: "E:\\node24\\npx.cmd"
+       args:
+        - "-y"
+        - "@waldzellai/structured-argumentation"
+      deepThinking:
+        command: "E:\\node24\\npx.cmd"
+        args:
+         - "-y"
+         - "mcp-sequentialthinking-tools"  # 结构化推理,实现react模式
+   # DeepSeek 对话配置（注意：DeepSeek 兼容 OpenAI API 格式）
+  deepseek:
+   api-key: sk-da4f4ddc962f40c99510c54676936ae0
+   base-url: https://api.deepseek.com
+   chat:
+    options:
+     model: deepseek-chat
+     temperature: 0.7
+
+  # Ollama 嵌入配置
+  ollama:
+   base-url: http://localhost:11434
+   embedding:
+    options:
+     model: "bge-m3"  # 推荐使用专门的嵌入模型，否则检索会出问题
+   init:
+    pull-model-strategy: when_missing  # 本地缺少模型时自动拉取
+
+  # Chroma 向量库配置（如果需要）
+  vectorstore:
+   chroma:
+    client:
+     host: http://127.0.0.1 # 你的 Chroma 服务器 IP
+     port: 8000
+    collection-name: chroma_db
+    initialize-schema: true  # 自动创建表
+    tenant-name: default_tenant
+    database-name: default_database
+logging:
+ level:
+  org.springframework.ai: DEBUG
+  org.springframework.ai.chat.client.advisor: debug
+  org.springframework.ai.tool: debug
+  org.springframework.ai.chat.client: debug
+xxl:
+ job:
+  admin:
+   addresses: http://127.0.0.1:8090/xxl-job-admin
+  executor:
+   appname: AI-service
+   port: 9989
+  accessToken: default_token
+server:
+ port: 8086

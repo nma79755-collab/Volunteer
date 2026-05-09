@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.checkinservice.mapper.CheckInMapper">
+
+    <!-- Find check-ins by activity id -->
+    <select id="findByActivityId" parameterType="java.lang.Long" resultType="com.cyh.entity.CheckIn">
+        SELECT * FROM t_check_in WHERE activity_id = #{activityId} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+
+    <!-- Find check-ins by user id -->
+    <select id="findByUserId" parameterType="java.lang.Long" resultType="com.cyh.entity.CheckIn">
+        SELECT * FROM t_check_in WHERE user_id = #{userId} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+
+    <!-- Find check-in by registration id -->
+    <select id="findByRegistrationId" parameterType="java.lang.Long" resultType="com.cyh.entity.CheckIn">
+        SELECT * FROM t_check_in WHERE registration_id = #{registrationId} AND is_deleted = 0
+    </select>
+
+</mapper>
