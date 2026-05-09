@@ -135,7 +135,7 @@
       <module name="Registration-server" options="" />
       <module name="Registration-server (2)" options="-parameters" />
       <module name="Review-server" options="" />
-      <module name="SpringAi-be" options="-parameters" />
+      <module name="SpringAi-be" options="" />
       <module name="User-server" options="" />
       <module name="Volunteer-All-Api" options="-parameters" />
       <module name="Volunteer-Api (2)" options="-parameters" />

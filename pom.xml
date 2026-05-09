@@ -7,6 +7,8 @@
     <artifactId>Backend</artifactId>
     <packaging>pom</packaging>
     <name>Backend</name>
+    <groupId>com.cyh</groupId>
+    <version>1.0-SNAPSHOT</version>
     <description>A comprehensive volunteer service management platform</description>
     <modules>
         <module>User-server</module>
@@ -22,12 +24,6 @@
         <module>Message-server</module>
     </modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.8</version>
-        <relativePath>../../pom.xml</relativePath>
-    </parent>
 
     <properties>
         <java.version>17</java.version>
@@ -191,6 +187,16 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
+            <!-- 加这个 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.2.8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 已有的 spring-ai-bom -->
             <dependency>
                 <groupId>org.springframework.ai</groupId>
                 <artifactId>spring-ai-bom</artifactId>
