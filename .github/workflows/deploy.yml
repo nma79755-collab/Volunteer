@@ -1,6 +1,5 @@
 # 工作流名称：给这个自动化任务起个名字
 name: Deploy Volunteer Services
-
 # 触发器：告诉 GitHub 什么时候自动运行这个工作流
 on:
   push:
@@ -36,7 +35,7 @@ jobs:
 
       # 步骤 4：用 Maven 编译打包所有模块，跳过测试以节省时间
       - name: Build with Maven
-        run: mvn clean package -DskipTests
+        run: mvn clean install  -DskipTests
 
       # 步骤 5：通过 SSH 登录你的服务器，执行部署命令
       - name: Deploy to server via SSH

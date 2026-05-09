@@ -11,6 +11,7 @@
         <module name="Points-service" />
         <module name="CheckIn-service" />
         <module name="review-service" />
+        <module name="gateway-service" />
         <module name="Volunteer-All-Api" />
         <module name="registration-service" />
         <module name="SpringAi-be" />
