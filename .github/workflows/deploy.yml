@@ -34,9 +34,11 @@ jobs:
             ${{ runner.os }}-maven-
 
       # 步骤 4：用 Maven 编译打包所有模块，跳过测试以节省时间
-      - name: Build with Maven
-        run: mvn clean install  -DskipTests
+      - name: Install common modules first
+        run: mvn clean install -pl Volunteer-Common,Volunteer-Api -DskipTests
 
+      - name: Build all modules
+        run: mvn clean install -DskipTests
       # 步骤 5：通过 SSH 登录你的服务器，执行部署命令
       - name: Deploy to server via SSH
         uses: appleboy/ssh-action@v1.0.3
