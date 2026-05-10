@@ -34,7 +34,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p 2222 ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          ssh-keyscan -p 2222 47.118.24.242 >> ~/.ssh/known_hosts 2>/dev/null
 
           # 模块和 jar 路径对照
           declare -A modules
