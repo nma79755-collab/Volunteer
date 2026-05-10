@@ -45,12 +45,7 @@ jobs:
         with:
           host: 47.118.24.242      # 你的服务器 IP
           username: root   # 登录用户名
-          key:
-            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-            QyNTUxOQAAACB9N6Gs+2uVJL4vBrMb8JOv41CeeeENKg7nCwgC6RK7BQAAAJhhYR5XYWEe
-            VwAAAAtzc2gtZWQyNTUxOQAAACB9N6Gs+2uVJL4vBrMb8JOv41CeeeENKg7nCwgC6RK7BQ
-            AAAED/91vuoa7RkxYen1cw2B22RP24CMeZJqX6xEL2KOK5+H03oaz7a5Ukvi8Gsxvwk6/j
-            UJ554Q0qDucLCALpErsFAAAADmdpdGh1Yi1hY3Rpb25zAQIDBAUGBw==
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             echo "开始部署..."
             cd /opt/volunteer
