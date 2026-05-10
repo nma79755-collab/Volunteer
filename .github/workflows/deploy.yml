@@ -40,7 +40,7 @@ jobs:
             module=${dir%/}
             if [ -f "$module/target/"*.jar ]; then
               echo "  Copying $module..."
-              scp -P 2222 -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$module/target/"*.jar root@$47.118.24.242:/opt/volunteer/$module/target/
+              scp -P 2222 -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$module/target/"*.jar root@47.118.24.242:/opt/volunteer/$module/target/
             fi
           done
           echo "All jars copied!"
