@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 118.113.220.167      # 你的服务器 IP
+          host: 47.118.24.242      # 你的服务器 IP
           username: root   # 登录用户名
           key:
             b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW

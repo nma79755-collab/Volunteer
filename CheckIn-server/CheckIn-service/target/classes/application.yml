@@ -1,6 +1,6 @@
 spring:
  application:
-  name: User-Service
+  name: CheckIn-Service
  cloud:
   nacos:
    server-addr: 192.168.50.134:8848
@@ -46,17 +46,8 @@ xxl:
   admin:
    addresses: http://127.0.0.1:8090/xxl-job-admin
   executor:
-   appname: User-service
-   port: 9994
+   appname: CheckIn-service
+   port: 9990
   accessToken: default_token
 server:
- port: 8081
-sky:
- qiniulioss:
-  access-key-id: u7s-m3Jt_9H7zsINJVk4R6WOYqgSGuvC5qKC7m1a
-  endpoint: https://upload-z2.qiniup.com
-  bucket-name: volunteer-dev
-  access-key-secret: cToscPPUyG61gavzhz7I_lM1Ybq5qSZCDeP1Jo43
-github:
-  deploy:
-   token: ${GITHUB_DEPLOY_TOKEN:default-dev-token}
+ port: 8083

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyh.activityservice.mapper.ActivityMapper">
+    <insert id="insertImag">
+        INSERT INTO t_activity_img (activityId, url) VALUES
+        <foreach collection="imageUrl" item="url" separator=",">
+            (#{activityId}, #{url})
+        </foreach>
+    </insert>
+
+
+    <!-- Find activities by status -->
+    <select id="findByStatus" parameterType="java.lang.Integer" resultType="com.cyh.entity.Activity">
+        SELECT * FROM t_activity WHERE status = #{status} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+
+    <!-- Find activities by time range -->
+    <select id="findByTimeRange" parameterType="map" resultType="com.cyh.entity.Activity">
+        SELECT * FROM t_activity 
+        WHERE start_time >= #{startTime} AND end_time &lt;= #{endTime} AND is_deleted = 0 
+        ORDER BY start_time ASC
+    </select>
+
+    <!-- Find activities by created by -->
+    <select id="findByCreatedBy" parameterType="java.lang.Long" resultType="com.cyh.entity.Activity">
+        SELECT * FROM t_activity WHERE created_by = #{createdBy} AND is_deleted = 0 ORDER BY create_time DESC
+    </select>
+    <select id="getImg" resultType="com.cyh.entity.ActivityImg">
+        SELECT * FROM t_activity_img
+        WHERE activityId IN
+        <foreach collection="activityId" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <delete id="deleteImg">
+        DELETE FROM t_activity_img WHERE activityId = #{activityId}
+    </delete>
+
+    <insert id="insertImags">
+        INSERT INTO t_activity_img (activityId, url) VALUES
+        <foreach collection="imageUrl" item="url" separator=",">
+            (#{activityId}, #{url})
+        </foreach>
+    </insert>
+
+</mapper>
