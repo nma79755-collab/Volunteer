@@ -1,13 +1,26 @@
-- name: Deploy via SSH
-  uses: appleboy/ssh-action@v1.0.3
-  with:
-    host: 47.118.24.242
-    username: root
-    password: ${{ secrets.SSH_PASSWORD }}
-    port: 2222
-    script: |
-      cd /opt/volunteer
-      git pull origin main
-      mvn clean package -DskipTests
-      docker compose down
-      docker compose up -d --build
+name: Deploy Volunteer Services
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [ deploy-from-admin ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 47.118.24.242
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 2222
+          script: |
+            cd /opt/volunteer
+            git pull origin main
+            mvn clean package -DskipTests
+            docker compose down
+            docker compose up -d --build
