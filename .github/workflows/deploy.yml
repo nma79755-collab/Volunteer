@@ -16,7 +16,7 @@ jobs:
         with:
           host: 47.118.24.242
           username: root
-          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 2222
           script: |
             cd /opt/volunteer
