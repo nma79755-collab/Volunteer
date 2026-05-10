@@ -40,16 +40,20 @@ jobs:
       - name: Build all modules
         run: mvn clean install -DskipTests
 
-      - name: Copy jars to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-            host: 47.118.24.242
-            username: root
-            key: ${{ secrets.SSH_PRIVATE_KEY }}
-            port: 2222
-            source: "*/target/*.jar"
-            target: "/opt/volunteer/"
-            strip_components: 1
+      - name: Setup SSH and copy jars
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p 2222 47.118.24.242 >> ~/.ssh/known_hosts
+          for dir in */; do
+            module=${dir%/}
+            if ls "$module/target/"*.jar 1> /dev/null 2>&1; then
+              echo "Copying $module..."
+              scp -P 2222 -i ~/.ssh/id_rsa "$module/target/"*.jar root@47.118.24.242:/opt/volunteer/$module/target/
+            fi
+          done
+
       # 步骤 5：通过 SSH 登录你的服务器，执行部署命令
       - name: Deploy to server via SSH
         uses: appleboy/ssh-action@v1.0.3
