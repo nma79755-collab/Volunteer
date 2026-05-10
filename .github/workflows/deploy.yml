@@ -34,17 +34,30 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p 2222 47.118.24.242 >> ~/.ssh/known_hosts 2>/dev/null
-          echo "Copying jars..."
-          for dir in */; do
-            module=${dir%/}
-            if [ -f "$module/target/"*.jar ]; then
-              echo "  Copying $module..."
-              scp -P 2222 -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa "$module/target/"*.jar root@47.118.24.242:/opt/volunteer/$module/target/
+          ssh-keyscan -p 2222 ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+          # 模块和 jar 路径对照
+          declare -A modules
+          modules["Gateway/gateway-service"]="Gateway/gateway-service"
+          modules["User-server/user-service"]="User-server/user-service"
+          modules["Activity-server/activity-service"]="Activity-server/activity-service"
+          modules["CheckIn-server/CheckIn-service"]="CheckIn-server/CheckIn-service"
+          modules["Points-server/Points-service"]="Points-server/Points-service"
+          modules["Review-server/review-service"]="Review-server/review-service"
+          modules["Registration-server/registration-service"]="Registration-server/registration-service"
+          modules["AI-server/SpringAi-be"]="AI-server/SpringAi-be"
+          modules["Message-server/Message-service"]="Message-server/Message-service"
+          modules["Volunteer-Common"]="Volunteer-Common"
+          modules["Volunteer-Api"]="Volunteer-Api"
+
+          for path in "${!modules[@]}"; do
+            if [ -f "$path/target/"*.jar ]; then
+              echo "Copying $path..."
+              ssh root@${{ secrets.SERVER_HOST }} -p 2222 -i ~/.ssh/id_rsa "mkdir -p /opt/volunteer/$path/target"
+              scp -P 2222 -i ~/.ssh/id_rsa "$path/target/"*.jar root@${{ secrets.SERVER_HOST }}:/opt/volunteer/$path/target/
             fi
           done
           echo "All jars copied!"
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
