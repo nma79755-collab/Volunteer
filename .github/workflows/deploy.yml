@@ -53,8 +53,8 @@ jobs:
           for path in "${!modules[@]}"; do
             if [ -f "$path/target/"*.jar ]; then
               echo "Copying $path..."
-              ssh root@${{ secrets.SERVER_HOST }} -p 2222 -i ~/.ssh/id_rsa "mkdir -p /opt/volunteer/$path/target"
-              scp -P 2222 -i ~/.ssh/id_rsa "$path/target/"*.jar root@${{ secrets.SERVER_HOST }}:/opt/volunteer/$path/target/
+              ssh root@47.118.24.242 -p 2222 -i ~/.ssh/id_rsa "mkdir -p /opt/volunteer/$path/target"
+              scp -P 2222 -i ~/.ssh/id_rsa "$path/target/"*.jar root@47.118.24.242:/opt/volunteer/$path/target/
             fi
           done
           echo "All jars copied!"
