@@ -1,0 +1,60 @@
+spring:
+ application:
+  name: Message-Service
+ cloud:
+  nacos:
+   server-addr: nacos:8848
+   config:
+    import-check:
+     enabled: false
+  sentinel:
+   transport:
+    dashboard: sentinel:8858
+   http-method-specify: true
+ rabbitmq:
+  host: rabbitmq
+  port: 5672
+  username: root
+  password: 111600
+  virtual-host: /
+  listener:
+   direct:
+    prefetch: 1
+    acknowledge-mode: auto #消费者确认机制,通过抛出不同类型的异常来给出不同的返回值，来确认是否要删除队列中的消息
+    retry:
+     stateless: false #如果消息含有事务,改为false，设置为有状态
+     enabled: true
+     max-attempts: 3
+ datasource:
+  url: jdbc:mysql://mysql:3306/volunteer_db?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+  username: root
+  password: 111600
+  driver-class-name: com.mysql.cj.jdbc.Driver
+ servlet:
+  multipart:
+   enabled: true
+   max-file-size: 5MB
+   max-request-size: 10MB
+logging:
+ level:
+  org.springframework.ai: DEBUG
+  org.springframework.ai.chat.client.advisor: debug
+  org.springframework.ai.tool: debug
+  org.springframework.ai.chat.client: debug
+xxl:
+ job:
+  admin:
+   addresses: http://xxl-job-admin:8080/xxl-job-admin
+  executor:
+   appname: message-service
+   port: 9994
+  accessToken: default_token
+server:
+ port: 8088
+sky:
+ qiniulioss:
+  access-key-id: u7s-m3Jt_9H7zsINJVk4R6WOYqgSGuvC5qKC7m1a
+  endpoint: https://upload-z2.qiniup.com
+  bucket-name: volunteer-dev
+  access-key-secret: cToscPPUyG61gavzhz7I_lM1Ybq5qSZCDeP1Jo43
+

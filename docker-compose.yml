@@ -4,54 +4,148 @@ services:
     build: ./Gateway/gateway-service
     ports:
       - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   user-service:
     build: ./User-server/user-service
     ports:
       - "8081:8081"
     environment:
+      - SPRING_PROFILES_ACTIVE=pro
       - GITHUB_DEPLOY_TOKEN=${GITHUB_DEPLOY_TOKEN}
     restart: always
+    networks:
+      - volunteer_default
 
   activity-service:
     build: ./Activity-server/activity-service
     ports:
       - "8082:8082"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   checkin-service:
     build: ./CheckIn-server/CheckIn-service
     ports:
       - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   points-service:
     build: ./Points-server/Points-service
     ports:
       - "8084:8084"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   registration-service:
     build: ./Registration-server/registration-service
     ports:
       - "8085:8085"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   ai-service:
     build: ./AI-server/SpringAi-be
     ports:
       - "8086:8086"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   review-service:
     build: ./Review-server/review-service
     ports:
       - "8087:8087"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
 
   message-service:
     build: ./Message-server/Message-service
     ports:
       - "8088:8088"
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
     restart: always
+    networks:
+      - volunteer_default
+
+  # 中间件
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 111600
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    restart: always
+    networks:
+      - volunteer_default
+
+  nacos:
+    image: nacos/nacos-server:v2.1.0-slim
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    environment:
+      MODE: standalone
+    restart: always
+    networks:
+      - volunteer_default
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: 111600
+    restart: always
+    networks:
+      - volunteer_default
+
+  sentinel:
+    image: bladex/sentinel-dashboard:1.8.6
+    ports:
+      - "8858:8858"
+    restart: always
+    networks:
+      - volunteer_default
+
+  xxl-job-admin:
+    image: xuxueli/xxl-job-admin:2.4.0
+    ports:
+      - "8090:8080"
+    environment:
+      PARAMS: '--spring.datasource.url=jdbc:mysql://mysql:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai --spring.datasource.username=root --spring.datasource.password=111600 --server.port=8080'
+    restart: always
+    networks:
+      - volunteer_default
+
+networks:
+  volunteer_default:
+    driver: bridge

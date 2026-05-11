@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos:8848
+      config:
+        server-addr: nacos:8848
+        import-check:
+          enabled: false
+    gateway:
+      routes:
+        - id: CheckIn-service
+          uri: lb://CheckIn-Service
+          predicates:
+            - Path=/api/check-ins/**
+        - id: Activity-service
+          uri: lb://Activity-Service
+          predicates:
+            - Path=/api/activities/**
+        - id: Points-service
+          uri: lb://Points-Service
+          predicates:
+            - Path=/api/points/**
+        - id: Registration-service
+          uri: lb://Registration-Service
+          predicates:
+            - Path=/api/registrations/**
+        - id: User-service-auth
+          uri: lb://User-Service
+          predicates:
+            - Path=/api/auth/**
+        - id: User-service-messages
+          uri: lb://Message-Service
+          predicates:
+            - Path=/api/messages/**
+        - id: User-service-test
+          uri: lb://User-Service
+          predicates:
+            - Path=/api/test/**
+        - id: Review-service
+          uri: lb://Review-Service
+          predicates:
+            - Path=/api/reviews/**
+        - id: AI-service
+          uri: lb://AI-Service
+          predicates:
+            - Path=/api/ai/**
+        - id: ws-route
+          uri: lb://Message-Service
+          predicates:
+            - Path=/ws/**
+server:
+  port: 8080
+  compression:
+    enabled: false  # 禁用压缩，避免缓冲流数据
